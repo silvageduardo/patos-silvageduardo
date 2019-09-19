@@ -4,20 +4,29 @@ public abstract class Pato {
 
     private Volable comportamientoDeVuelo;
 
-    public Pato(Volable comportamientoDeVuelo) {
+    private Nadable comportamientoDeNado;
+
+    private Parpeable comportamientoDeParpar;
+
+    public Pato(Volable comportamientoDeVuelo, Nadable comportamientoDeNado, Parpeable comportamientoDeParpar) {
         this.comportamientoDeVuelo = comportamientoDeVuelo;
+        this.comportamientoDeNado = comportamientoDeNado;
+        this.comportamientoDeParpar = comportamientoDeParpar;
     }
 
     public void volar() {
         comportamientoDeVuelo.volar();
     }
+    public void parpar() { comportamientoDeParpar.parpar();}
+    public void nadar(){ comportamientoDeNado.nadar();}
 
-    public void parpar() {
-        System.out.println("Cuac!");
+
+    public void setComportamientoDeNado(Nadable comportamientoDeNado) {
+        this.comportamientoDeNado = comportamientoDeNado;
     }
 
-    public void nadar() {
-        System.out.println("Nado como un pato");
+    public void setComportamientoDeParpar(Parpeable comportamientoDeParpar) {
+        this.comportamientoDeParpar = comportamientoDeParpar;
     }
 
     public void setComportamientoDeVuelo(Volable comportamientoDeVuelo) {

@@ -3,7 +3,7 @@ package ar.edu.unahur.ob2.patos.modelo;
 public class PatoHule extends Pato {
 
     public PatoHule() {
-        super(new NoVuelo());
+        super(new NoVuelo(),new NoNadar(), new NoParpea());
     }
 
     @Override
@@ -11,8 +11,4 @@ public class PatoHule extends Pato {
         System.out.println("Soy un pato de hule");
     }
 
-    @Override
-    public void parpar() {
-        System.out.println("Cuek");
-    }
 }
